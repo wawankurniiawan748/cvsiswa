@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#dce9ff", "surface-container": "#e6eeff", "surface-dim": "#ccdbf3", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed": "#131b2e", "on-error-container": "#93000a", "on-surface": "#0d1c2e", "surface-tint": "#00629d", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#003043", "tertiary-container": "#009ed5", "error": "#ba1a1a", "error-container": "#ffdad6", "inverse-surface": "#233144", "tertiary": "#00668a", "on-tertiary-fixed-variant": "#004c69", "tertiary-fixed": "#c4e7ff", "surface": "#f8f9ff", "on-tertiary-fixed": "#001e2c", "secondary-fixed-dim": "#bec6e0", "on-primary-fixed-variant": "#004a78", "primary-fixed": "#cfe5ff", "inverse-primary": "#99cbff", "on-tertiary": "#ffffff", "on-surface-variant": "#3f4851", "surface-bright": "#f8f9ff", "secondary": "#565e74", "on-primary-container": "#002e4d", "on-secondary-fixed-variant": "#3f465c", "on-primary-fixed": "#001d33", "tertiary-fixed-dim": "#7bd0ff", "on-background": "#0d1c2e", "on-error": "#ffffff", "primary": "#00629d", "outline-variant": "#bfc7d3", "on-secondary-container": "#5c647a", "on-primary": "#ffffff", "primary-container": "#2599eb", "background": "#f8f9ff", "on-secondary": "#ffffff", "outline": "#707883", "surface-variant": "#d5e3fc", "secondary-container": "#dae2fd", "surface-container-low": "#eff4ff", "surface-container-highest": "#d5e3fc", "secondary-fixed": "#dae2fd", "primary-fixed-dim": "#99cbff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2rem" }, fontFamily: { "display-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-[1200px] mx-auto px-gutter flex items-center justify-between"><a
+        class="flex items-center gap-space-xs font-headline-md text-headline-md text-on-surface tracking-tight"
+        data-path="profil" href="#"><span>Nabil</span><span
+          class="w-2 h-2 rounded-full bg-primary-container inline-block"></span></a>
+      <nav class="hidden lg:flex items-center gap-space-xs"
+        data-active-classes="bg-surface-container text-on-surface font-semibold rounded-lg"><a aria-current="page"
+          class="px-3 py-2 transition-all bg-surface-container text-on-surface font-semibold rounded-lg"
+          data-path="profil" href="#">Profil</a><a
+          class="px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+          data-path="magang" href="#">Magang</a><a
+          class="px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+          data-path="proyek" href="#">Proyek</a><a
+          class="px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+          data-path="keahlian" href="#">Keahlian</a><a
+          class="px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+          data-path="prestasi" href="#">Prestasi</a><a
+          class="px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+          data-path="kontak" href="#">Kontak</a></nav>
+      <div class="flex items-center gap-space-md"><a
+          class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold shadow-[0_4px_12px_rgba(37,153,235,0.25)] hover:bg-primary transition-all"
+          data-path="kontak" href="#">Hubungi Saya</a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+    <div class="flex flex-col w-full">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+      <style>
+        @layer base {
+
+          html,
+          body {
+            margin: 0;
+            padding: 0;
+          }
+
+          body {
+            overscroll-behavior: none;
+          }
+
+          main> :first-child {
+            margin-top: 0 !important;
+          }
+
+          main> :last-child {
+            margin-bottom: 0 !important;
+          }
+        }
+
+        html {
+          scroll-behavior: smooth;
+          scroll-padding-top: 5rem;
+        }
+
+        section[id] {
+          scroll-margin-top: 5.5rem;
+        }
+
+        ::-webkit-scrollbar {
+          display: none;
+        }
+      </style>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#dce9ff", "surface-container": "#e6eeff", "surface-dim": "#ccdbf3", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed": "#131b2e", "on-error-container": "#93000a", "on-surface": "#0d1c2e", "surface-tint": "#00629d", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#003043", "tertiary-container": "#009ed5", "error": "#ba1a1a", "error-container": "#ffdad6", "inverse-surface": "#233144", "tertiary": "#00668a", "on-tertiary-fixed-variant": "#004c69", "tertiary-fixed": "#c4e7ff", "surface": "#f8f9ff", "on-tertiary-fixed": "#001e2c", "secondary-fixed-dim": "#bec6e0", "on-primary-fixed-variant": "#004a78", "primary-fixed": "#cfe5ff", "inverse-primary": "#99cbff", "on-tertiary": "#ffffff", "on-surface-variant": "#3f4851", "surface-bright": "#f8f9ff", "secondary": "#565e74", "on-primary-container": "#002e4d", "on-secondary-fixed-variant": "#3f465c", "on-primary-fixed": "#001d33", "tertiary-fixed-dim": "#7bd0ff", "on-background": "#0d1c2e", "on-error": "#ffffff", "primary": "#00629d", "outline-variant": "#bfc7d3", "on-secondary-container": "#5c647a", "on-primary": "#ffffff", "primary-container": "#2599eb", "background": "#f8f9ff", "on-secondary": "#ffffff", "outline": "#707883", "surface-variant": "#d5e3fc", "secondary-container": "#dae2fd", "surface-container-low": "#eff4ff", "surface-container-highest": "#d5e3fc", "secondary-fixed": "#dae2fd", "primary-fixed-dim": "#99cbff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2rem" }, fontFamily: { "display-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script>
+      </head>
+
+      <body class="bg-surface font-body-md text-on-surface antialiased">
+        <header id="site-header"
+          class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all duration-300">
+          <div class="h-20 max-w-[1200px] mx-auto px-gutter flex items-center justify-between">
+            <a class="flex items-center gap-space-xs font-headline-md text-headline-md text-on-surface tracking-tight group"
+              href="#profil">
+              <span class="group-hover:text-primary transition-colors">Nabil</span>
+              <span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-space-xs" id="desktop-nav">
+              <a class="nav-link px-3 py-2 rounded-lg font-body-sm text-body-sm transition-all bg-surface-container text-on-surface font-semibold"
+                data-nav="profil" href="#profil" aria-current="page">Profil</a>
+              <a class="nav-link px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="magang" href="#magang">Magang</a>
+              <a class="nav-link px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="proyek" href="#proyek">Proyek</a>
+              <a class="nav-link px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="keahlian" href="#keahlian">Keahlian</a>
+              <a class="nav-link px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="pendidikan" href="#pendidikan">Pendidikan</a>
+              <a class="nav-link px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="prestasi" href="#prestasi">Prestasi</a>
+              <a class="nav-link px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="kontak" href="#kontak">Kontak</a>
+            </nav>
+            <div class="flex items-center gap-space-sm sm:gap-space-md">
+              <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold shadow-[0_4px_12px_rgba(37,153,235,0.25)] hover:bg-primary transition-all"
+                href="#kontak">Hubungi Saya</a>
+              <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm">
+                <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+              </div>
+              <!-- Mobile hamburger toggle button -->
+              <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false"
+                class="lg:hidden w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors focus:outline-none">
+                <span class="material-symbols-outlined text-[24px]" id="mobile-menu-icon">menu</span>
+              </button>
+            </div>
+          </div>
+          <!-- Mobile dropdown navigation menu -->
+          <div id="mobile-menu"
+            class="hidden lg:hidden border-t border-surface-container bg-surface-container-lowest/95 backdrop-blur-xl px-gutter py-4 shadow-xl transition-all">
+            <nav class="flex flex-col gap-1 max-w-[1200px] mx-auto">
+              <a class="mobile-nav-link px-4 py-2.5 rounded-lg font-body-sm text-body-sm transition-all bg-surface-container text-on-surface font-semibold"
+                data-nav="profil" href="#profil" aria-current="page">Profil</a>
+              <a class="mobile-nav-link px-4 py-2.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="magang" href="#magang">Magang</a>
+              <a class="mobile-nav-link px-4 py-2.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="proyek" href="#proyek">Proyek</a>
+              <a class="mobile-nav-link px-4 py-2.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="keahlian" href="#keahlian">Keahlian</a>
+              <a class="mobile-nav-link px-4 py-2.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="pendidikan" href="#pendidikan">Pendidikan</a>
+              <a class="mobile-nav-link px-4 py-2.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="prestasi" href="#prestasi">Prestasi</a>
+              <a class="mobile-nav-link px-4 py-2.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all"
+                data-nav="kontak" href="#kontak">Kontak</a>
+              <div class="pt-3 mt-1 border-t border-surface-container sm:hidden">
+                <a class="flex items-center justify-center w-full px-5 py-2.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold shadow-md hover:bg-primary transition-all text-center"
+                  href="#kontak">Hubungi Saya</a>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+          <div class="flex flex-col w-full">
+            <!-- Top Ambient Glow Decorator -->
+            <div class="relative w-full max-w-[1200px] mx-auto px-gutter overflow-visible">
+              <div
+                class="absolute -top-12 left-1/2 -translate-x-1/2 w-[600px] h-[240px] bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10">
+              </div>
+            </div>
+            <!-- SECTION 1: PROFIL & OVERVIEW -->
+            <section class="w-full max-w-[1200px] mx-auto px-gutter pt-8 pb-space-xl" id="profil">
+              <span id="hero" class="sr-only"></span>
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                <!-- Main Intro Card (Bento Span 7) -->
+                <div
+                  class="lg:col-span-7 flex flex-col justify-between p-8 md:p-10 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-300">
+                  <div>
+                    <!-- Status Pill -->
+                    <div
+                      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm mb-6">
+                      <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                      <span>Tersedia untuk Proyek &amp; Kolaborasi</span>
+                    </div>
+                    <!-- Title -->
+                    <h1 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight mb-3">
+                      Muhammad Nabil Taseefa
+                    </h1>
+                    <!-- Tagline Highlight -->
+                    <p
+                      class="font-headline-md text-headline-sm md:text-headline-md text-on-surface-variant font-semibold mb-6">
+                      <span class="text-primary-container">Web Developer</span>, UI/UX Designer &amp; Multimedia
+                      Creator
+                    </p>
+                    <!-- Narrative Body -->
+                    <p
+                      class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-xl leading-relaxed mb-8">
+                      Siswa jurusan Pengembangan Perangkat Lunak dan Gim (PPLG) di <strong
+                        class="text-on-surface font-semibold">SMKS Cinta Kasih Tzu Chi</strong> yang berdedikasi
+                      merancang antarmuka intuitif, arsitektur web modern, dan produksi multimedia sinematik.
+                    </p>
+                  </div>
+                  <!-- Action CTAs -->
+                  <div class="flex flex-wrap items-center gap-space-sm pt-4">
+                    <a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold shadow-md hover:bg-primary transition-all duration-200"
+                      href="#magang">
+                      <span>Lihat Pengalaman</span>
+                      <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-body-sm font-semibold transition-all duration-200"
+                      href="#prestasi">
+                      <span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+                      <span>Lihat Sertifikat</span>
+                    </a>
+                    <a aria-label="Profil LinkedIn"
+                      class="p-3 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-all"
+                      href="https://linkedin.com/in/muhammadnabiltaseefa/" rel="noreferrer" target="_blank">
+                      <span class="material-symbols-outlined text-[20px]">share</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Right Column: Bento Cluster (Span 5) -->
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-gutter">
+                  <!-- Visual Profile Mini Card -->
+                  <div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
+                    <div
+                      class="w-16 h-16 rounded-xl bg-surface-container-high flex-shrink-0 flex items-center justify-center text-primary-container shadow-inner">
+                      <span class="material-symbols-outlined text-[36px]"
+                        style="font-variation-settings: 'FILL' 1;">terminal</span>
+                    </div>
+                    <div class="min-w-0">
+                      <div class="font-label-sm text-label-sm text-primary uppercase font-semibold">Spesialisasi PPLG
+                      </div>
+                      <div class="font-headline-sm text-headline-sm text-on-surface truncate">Fullstack &amp; Game
+                        Engine</div>
+                      <div class="font-body-sm text-body-sm text-on-surface-variant">SMKS Cinta Kasih Tzu Chi</div>
+                    </div>
+                  </div>
+                  <!-- Metrics Bento Trio -->
+                  <div class="grid grid-cols-3 gap-3 p-6 rounded-xl bg-surface-container-lowest shadow-sm">
+                    <div
+                      class="flex flex-col items-center justify-center text-center p-3 rounded-lg bg-surface-container-low">
+                      <span class="font-headline-lg text-headline-lg text-primary-container font-extrabold">3+</span>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 leading-tight">Tahun
+                        Belajar</span>
+                    </div>
+                    <div
+                      class="flex flex-col items-center justify-center text-center p-3 rounded-lg bg-surface-container-low">
+                      <span class="font-headline-lg text-headline-lg text-primary-container font-extrabold">6+</span>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 leading-tight">Bidang
+                        Karya</span>
+                    </div>
+                    <div
+                      class="flex flex-col items-center justify-center text-center p-3 rounded-lg bg-surface-container-low">
+                      <span class="font-headline-lg text-headline-lg text-primary-container font-extrabold">2</span>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 leading-tight">Juara
+                        Prestasi</span>
+                    </div>
+                  </div>
+                  <!-- Micro Code Visual Snippet Card -->
+                  <div class="p-5 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-md">
+                    <div class="flex items-center justify-between pb-3 mb-3 border-b border-surface-variant/20">
+                      <div class="flex items-center gap-1.5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+                      </div>
+                      <span class="font-label-sm text-label-sm text-secondary-fixed-dim">developer-profile.ts</span>
+                    </div>
+                    <pre class="font-label-sm text-label-sm overflow-x-auto text-primary-fixed leading-relaxed"><code>const developer = {
+  name: "Muhammad Nabil Taseefa",
+  focus: ["Web Apps", "UI/UX", "Multimedia"],
+  status: "Ready for Internship &amp; Impact"
+};</code></pre>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 2: PENGALAMAN MAGANG (#magang) -->
+            <section class="w-full max-w-[1200px] mx-auto px-gutter py-space-xl" id="magang">
+              <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+                <div>
+                  <div
+                    class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider mb-2">
+                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    <span>Pengalaman Profesional</span>
+                  </div>
+                  <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Pengalaman Magang</h2>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                  Penerapan kompetensi teknis industri dalam pengembangan platform web profil perusahaan dan aset
+                  visual komersial.
+                </p>
+              </div>
+              <!-- Featured Internship Card -->
+              <div
+                class="rounded-xl bg-surface-container-lowest p-8 md:p-10 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+                <!-- Accent Top Banner Line -->
+                <div
+                  class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary-container via-primary to-tertiary">
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  <div class="lg:col-span-5 flex flex-col gap-4">
+                    <div
+                      class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                      <span>Januari 2026 – April 2026</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface font-bold">PT.
+                        Triesa Karya Perkasa</h3>
+                      <p class="font-headline-sm text-headline-sm text-primary-container font-semibold mt-1">
+                        Web Development, Desain Produk &amp; Pengelolaan Konten
+                      </p>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                      Bertanggung jawab penuh atas keandalan aset digital korporat, pemeliharaan sistem informasi
+                      katalog, dan pengemasan materi visual produk secara estetis dan fungsional.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                      <span
+                        class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Web
+                        Maintenance</span>
+                      <span
+                        class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Product
+                        Visualization</span>
+                      <span
+                        class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Data
+                        Cataloging</span>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-7 flex flex-col gap-4">
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold">Tanggung
+                      Jawab Utama</span>
+                    <!-- Task 1 -->
+                    <div class="p-5 rounded-xl bg-surface-container-low flex items-start gap-4">
+                      <div
+                        class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <span class="material-symbols-outlined text-[22px]">desktop_windows</span>
+                      </div>
+                      <div>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface text-[17px] font-semibold mb-1">
+                          Rancang Bangun &amp; Maintenance Website
+                        </h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                          Merancang dan memelihara (maintenance) website profil perusahaan agar selalu responsif,
+                          cepat diakses di berbagai perangkat, serta bebas kendala teknis.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Task 2 -->
+                    <div class="p-5 rounded-xl bg-surface-container-low flex items-start gap-4">
+                      <div
+                        class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <span class="material-symbols-outlined text-[22px]">palette</span>
+                      </div>
+                      <div>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface text-[17px] font-semibold mb-1">
+                          Desain Visual &amp; Presentasi Produk
+                        </h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                          Membuat rancangan visual serta desain materi promosi produk perusahaan berstandar estetika
+                          tinggi demi memperkuat citra merek di pasar sasaran.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Task 3 -->
+                    <div class="p-5 rounded-xl bg-surface-container-low flex items-start gap-4">
+                      <div
+                        class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <span class="material-symbols-outlined text-[22px]">inventory_2</span>
+                      </div>
+                      <div>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface text-[17px] font-semibold mb-1">
+                          Kurasi Data Katalog Terstruktur
+                        </h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                          Melakukan input data, pengorganisasian metadata produk, serta validasi konten secara presisi
+                          ke dalam sistem manajemen inventori katalog website.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 3: PROYEK SEKOLAH & PELATIHAN (#proyek) -->
+            <section class="w-full max-w-[1200px] mx-auto px-gutter py-space-xl" id="proyek">
+              <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+                <div>
+                  <div
+                    class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider mb-2">
+                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    <span>Eksplorasi Praktis</span>
+                  </div>
+                  <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Proyek &amp; Portofolio
+                    Karya</h2>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                  Enam ranah eksekusi proyek vokasi: mulai dari pengembangan aplikasi web, perancangan basis data,
+                  simulasi game, hingga multimedia sinematik.
+                </p>
+              </div>
+              <!-- 6 Bento Cards Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <!-- Card 1: SMK Mengajar 2025 -->
+                <div
+                  class="group flex flex-col justify-between p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                  <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-5 bg-surface-container relative">
+                      <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Interactive classroom workshop session showing students learning UI UX and Figma design with bright modern monitors inside a clean Tzu Chi school lab"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQvObbsSdH9QV9QY3OKhgFIINr_29vap8aJ9ILY7iMrOsHRP2Z4lOesQWpr-lzhPqQrhukg_wGL1WFQ6N0xvncLZnrW_HgJDkt_K0H8dnWAj6613cdtvs8wCIU8LoPWofF2bHOCFA68WlkYMQnPpInu2IgGkLLpIENTI7OlFR2JretI2kIOd1N7LbhmOEfDGEcL4FCxKrD13f2ki2goewZdS3PFBLstfPPTY2t71A" />
+                      <div
+                        class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm font-semibold text-primary">
+                        Mentorship
+                      </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">SMK Mengajar 2025
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                      Mengajar dasar-dasar UI/UX design dan perangkat lunak Figma secara interaktif kepada siswa SMP
+                      Cinta Kasih Tzu Chi dalam program edukasi vokasi sekolah.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-3">
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Mentorship</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">UI/UX</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Figma</span>
+                  </div>
+                </div>
+                <!-- Card 2: Web Development -->
+                <div
+                  class="group flex flex-col justify-between p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                  <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-5 bg-surface-container relative">
+                      <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Modern web application dashboard preview displayed on multiple screens featuring responsive code, clear data widgets, and clean typography with blue highlights"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5nDVWMK56IMw5DpYI3by9iIT0k3Ib5lYpla2gBSkA_3EWpWycGfBFoQswNJ4Zy5AJsDuSurs85c9MvYSNY4nCU1SvlYU0M0mGD0jh5zMvjCpbBbwQHhuFx3vCjo6NqMB7HW5naKpwslQs_l841v4hrV49phFDTo4PI-zeX_ypg_vrxYbXSUiroPl8SIbVtf0oa2T8laBCcdmyzf08Lou2z-5m9cFxFn0xvGgW210" />
+                      <div
+                        class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm font-semibold text-primary">
+                        Fullstack
+                      </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">Pengembangan Web
+                      Aplikasi</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                      Pembuatan website aplikasi modern berbasis HTML5, CSS3, JavaScript, PHP, Laravel, dan ReactJS
+                      dengan arsitektur RESTful yang rapi dan responsif.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-3">
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">Laravel</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">ReactJS</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">PHP
+                      / MySQL</span>
+                  </div>
+                </div>
+                <!-- Card 3: Perancangan Database -->
+                <div
+                  class="group flex flex-col justify-between p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                  <div>
+                    <div
+                      class="w-full h-44 rounded-xl overflow-hidden mb-5 bg-surface-container p-4 flex flex-col justify-center items-center text-center">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary-container flex items-center justify-center mb-2 shadow-sm">
+                        <span class="material-symbols-outlined text-[28px]">schema</span>
+                      </div>
+                      <div class="font-label-sm text-label-sm text-on-surface font-semibold">Relational Database
+                        Diagram</div>
+                      <div class="font-label-sm text-label-sm text-secondary">3NF Normalization &amp; Constraints
+                      </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">Perancangan Database
+                      &amp; ERD</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                      Pemodelan data konseptual dan pembuatan Entity Relationship Diagram (ERD) kompleks berorientasi
+                      studi kasus bisnis nyata dan normalisasi relasional.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-3">
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Database
+                      Design</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">ERD</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Relational</span>
+                  </div>
+                </div>
+                <!-- Card 4: Film Pendek Sejarah -->
+                <div
+                  class="group flex flex-col justify-between p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                  <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-5 bg-surface-container relative">
+                      <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Cinematic production still from a historical dramatic short film set during Japanese occupation era in Indonesia showing authentic costumes and cinematic natural lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Xmph_oe_is8i5bxVhWK9FB3-QBlY1oYd9wILmyFRfiiCOBuT2Ni4PkQMor6PFeJBGtTZe576W3SyG2XXPG-2ySU1AoYVyzO1h0-MXo3XjSR3OZvR_oacXBBirD4dLPAdr9fVZGcYg_S-UfC14sgPOGCTW5HvtrtwS_fgl9xWWcjuijvImvOcMD_vt-8e361LDJWUpKDSN9mPjSbUbZ_bev91iTKm2DGsxe6wc6I" />
+                      <div
+                        class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm font-semibold text-primary">
+                        Produksi Film
+                      </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">Film Pendek Sejarah
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                      Kolaborasi lintas mata pelajaran Sejarah &amp; KKAF memproduksi film pendek "Perjuangan di Masa
+                      Penjajahan Jepang" dengan peran penyutradaraan dan sinematografi.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-3">
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Directing</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">Cinematography</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Editing</span>
+                  </div>
+                </div>
+                <!-- Card 5: Game Development -->
+                <div
+                  class="group flex flex-col justify-between p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                  <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-5 bg-surface-container relative">
+                      <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Vibrant 2D indie pixel game design environment in Godot engine with collision boxes, sprite animations, platform mechanics and custom UI hud"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHOjhKnAG5g8FvugzR_yeutikB_QOPf4ah-ql0svYAfLOTxHt81H6s7KLyRjOjq76UIzmwZaw90IiUFs0TfYuD6vHO_ySRQNEefNNEpZsnM7z91elBtfFsg63ExKy6uLajtBE1Ofhjx7haeB59vEJKXSErHvQjH2-51JlDuwR_mRkjG47wBqj2NmPB3uwK3UmJNl1-NyJDJPVrxnOHmj7xkw2mfbGOYrqqYLqjks" />
+                      <div
+                        class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm font-semibold text-primary">
+                        Game Dev
+                      </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">Game Development 2D
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                      Merancang logika gameplay terstruktur, perakitan visual sprite assets, event sheets, dan kontrol
+                      interaksi pada game 2D memakai GDevelop dan Godot Engine.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-3">
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">Godot
+                      Engine</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">GDevelop</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Game
+                      Logic</span>
+                  </div>
+                </div>
+                <!-- Card 6: Fotografi & Video Editing -->
+                <div
+                  class="group flex flex-col justify-between p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                  <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-5 bg-surface-container relative">
+                      <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Camera lens and professional video editing timeline interface with color grading wheels, audio wave monitors, and 4k resolution footage previews"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp_PN9jToiNPESNYGpmJv03A4eUvNvFqgZnAkP1Ff9KTM6J4vysPlabYgQUNbQQmaXmKC2HGsiTfPBHc5UQsQV8Yo-f3dCt-fynFH3ZSo4zs4K_qAzyQv3R3RdJMakDUzuA5-v3-_4cit9m76cIVw2JR-bXDa1InzJdccUz4EHrWgJGe90TX2kjpQOiHc3RLsau6eo4KevhWKXs2M5SAMhn_hswYQLdttJn-G-1Q8" />
+                      <div
+                        class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm font-semibold text-primary">
+                        Post-Production
+                      </div>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">Fotografi &amp; Video
+                      Editing</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                      Pengambilan gambar dengan teknik angle sinematik dan pasca-produksi editing presisi menggunakan
+                      CapCut, Adobe Premiere Pro, dan Wondershare Filmora.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-3">
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">Premiere
+                      Pro</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">CapCut</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Filmora</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 4: KEAHLIAN / SKILLS (#keahlian) -->
+            <section class="w-full max-w-[1200px] mx-auto px-gutter py-space-xl" id="keahlian">
+              <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+                <div>
+                  <div
+                    class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider mb-2">
+                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    <span>Tech Stack &amp; Tools</span>
+                  </div>
+                  <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Keahlian &amp;
+                    Kapabilitas</h2>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                  Kombinasi kemampuan rekayasa perangkat lunak, perancangan visual digital, dan pengoperasian
+                  perangkat keras.
+                </p>
+              </div>
+              <!-- 4 Bento Cards Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <!-- 1. Web & Database -->
+                <div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[26px]">code</span>
+                      </div>
+                      <div>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">Web &amp; Database
+                        </h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">Front-end, Back-end &amp;
+                          Relational Schema</p>
+                      </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                      Membangun arsitektur web modern dari perancangan skema relasional, logika backend terstruktur,
+                      hingga antarmuka responsif pengguna.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">HTML5</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">CSS3</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">JavaScript</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">PHP</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Laravel</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">ReactJS</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Git
+                      &amp; GitHub</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">ERD
+                      Modeling</span>
+                  </div>
+                </div>
+                <!-- 2. UI/UX & Desain Grafis -->
+                <div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-3 mb-4">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[26px]">design_services</span>
+                      </div>
+                      <div>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">Desain UI/UX &amp;
+                          Grafis</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">User Centric &amp; Aesthetic
+                          Systems</p>
+                      </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                      Merumuskan wireframe, sistem desain terstruktur, serta prototipe interaktif yang mengutamakan
+                      kemudahan navigasi pengguna.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">UI/UX
+                      Design</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Figma</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Canva</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">User
+                      Research</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Interactive
+                      Prototyping</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Wireframing</span>
+                  </div>
+                </div>
+                <!-- 3. Multimedia & Video -->
+                <div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-3 mb-4">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-surface-container-high text-primary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[26px]">videocam</span>
+                      </div>
+                      <div>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">Multimedia &amp;
+                          Audiovisual</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">Camera Handling &amp;
+                          Post-Production</p>
+                      </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                      Pengoperasian kamera profesional dengan kaidah sinematografi serta editing video dinamis untuk
+                      keperluan edukasi dan promosi.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">DSLR
+                      &amp; Mirrorless</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Teknik
+                      Framing</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Adobe
+                      Premiere Pro</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">CapCut
+                      Desktop</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Wondershare
+                      Filmora</span>
+                  </div>
+                </div>
+                <!-- 4. Game & Sistem Komputer -->
+                <div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-3 mb-4">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-fixed flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[26px]">sports_esports</span>
+                      </div>
+                      <div>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">Game &amp; Sistem
+                          Komputer</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">Engines, Hardware &amp; OS
+                          Maintenance</p>
+                      </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                      Pengembangan interaksi gim 2D, pemahaman komponen jeroan komputer/laptop, serta instalasi dan
+                      troubleshooting sistem operasi.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Godot
+                      Engine</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">GDevelop</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Hardware
+                      Komputer</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Perawatan
+                      Laptop</span>
+                    <span
+                      class="px-3 py-1.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Operating
+                      System</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 5: PENDIDIKAN & ORGANISASI (#pendidikan) -->
+            <section class="w-full max-w-[1200px] mx-auto px-gutter py-space-xl" id="pendidikan">
+              <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+                <div>
+                  <div
+                    class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider mb-2">
+                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    <span>Latar Belakang</span>
+                  </div>
+                  <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Pendidikan &amp;
+                    Organisasi</h2>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                  Rekam jejak akademik vokasi yang diimbangi dengan kepemimpinan aktif serta tanggung jawab sosial
+                  organisasi.
+                </p>
+              </div>
+              <!-- 2 Column Bento Grid -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                <!-- Col 1: Pendidikan (Span 5) -->
+                <div
+                  class="lg:col-span-5 p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-3 mb-6">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center flex-shrink-0">
+                        <span class="material-symbols-outlined text-[26px]">school</span>
+                      </div>
+                      <div>
+                        <span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Pendidikan
+                          Formal</span>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">SMKS Cinta Kasih Tzu
+                          Chi</h3>
+                      </div>
+                    </div>
+                    <div class="space-y-4">
+                      <div class="p-4 rounded-xl bg-surface-container-low">
+                        <div class="font-label-sm text-label-sm text-on-surface-variant">Program Keahlian</div>
+                        <div class="font-headline-sm text-headline-sm text-on-surface text-[17px] font-semibold mt-0.5">
+                          Pengembangan Perangkat Lunak dan Gim (PPLG)
+                        </div>
+                      </div>
+                      <div class="p-4 rounded-xl bg-surface-container-low">
+                        <div class="font-label-sm text-label-sm text-on-surface-variant">Periode Studi</div>
+                        <div
+                          class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5 flex items-center gap-2">
+                          <span>Juli 2024 – Sekarang</span>
+                          <span
+                            class="inline-block px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-medium">Aktif</span>
+                        </div>
+                      </div>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pt-2">
+                        Fokus kurikulum pada komputasi terapan, logika algoritma, rekayasa perangkat lunak
+                        berorientasi objek, perancangan antarmuka pengguna, serta etika humanis Tzu Chi.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="pt-6">
+                    <div class="inline-flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+                      <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                      <span>Cengkareng, Jakarta Barat</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Col 2: Organisasi (Span 7) -->
+                <div
+                  class="lg:col-span-7 p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between mb-6 flex-wrap gap-2">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-fixed flex items-center justify-center flex-shrink-0">
+                          <span class="material-symbols-outlined text-[26px]">groups</span>
+                        </div>
+                        <div>
+                          <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Kepemimpinan
+                            Sekolah</span>
+                          <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">ROHIS SMKS Cinta
+                            Kasih Tzu Chi</h3>
+                        </div>
+                      </div>
+                      <span
+                        class="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface font-semibold">
+                        Oktober 2024 – Sekarang
+                      </span>
+                    </div>
+                    <div class="space-y-4">
+                      <!-- Position 1 -->
+                      <div class="p-5 rounded-xl bg-surface-container-low">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                          <h4
+                            class="font-headline-sm text-headline-sm text-[17px] text-on-surface font-bold flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                            <span>Wakil Ketua</span>
+                          </h4>
+                          <span class="font-label-sm text-label-sm text-primary font-semibold">Manajemen &amp;
+                            Operasional</span>
+                        </div>
+                        <ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+                          <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+                            <span>Mengkoordinasikan dan mengelola rutinitas kegiatan ngaji online setiap malam
+                              Jumat.</span>
+                          </li>
+                          <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+                            <span>Memimpin kepanitiaan pelaksanaan program pesantren kilat ramadhan di lingkungan
+                              sekolah.</span>
+                          </li>
+                          <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+                            <span>Mengorganisir rekrutmen dan orientasi kaderisasi penerimaan anggota baru
+                              ROHIS.</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- Position 2 -->
+                      <div class="p-5 rounded-xl bg-surface-container-low">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                          <h4
+                            class="font-headline-sm text-headline-sm text-[17px] text-on-surface font-bold flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            <span>Anggota Divisi Kedisiplinan</span>
+                          </h4>
+                          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Tata
+                            Tertib</span>
+                        </div>
+                        <ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+                          <li class="flex items-start gap-2">
+                            <span
+                              class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+                            <span>Melakukan pencatatan presensi digital berkala pada sesi ngaji online &amp; salat
+                              Jumat berjamaah.</span>
+                          </li>
+                          <li class="flex items-start gap-2">
+                            <span
+                              class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+                            <span>Menegakkan ketertiban tata tertib kegiatan dan membina kekompakan seluruh
+                              anggota.</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant pt-4">
+                    Mengasah kecakapan komunikasi publik, manajemen waktu, dan koordinasi tim lintas angkatan.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 6: PRESTASI & SERTIFIKAT (#prestasi) -->
+            <section class="w-full max-w-[1200px] mx-auto px-gutter py-space-xl" id="prestasi">
+              <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+                <div>
+                  <div
+                    class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider mb-2">
+                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    <span>Apresiasi &amp; Validasi</span>
+                  </div>
+                  <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Prestasi &amp;
+                    Sertifikasi</h2>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                  Pencapaian kompetitif di bidang arsitektur digital visual serta sertifikasi kompetensi desain
+                  antarmuka.
+                </p>
+              </div>
+              <!-- Grid: 2 Prestasi + 1 Sertifikat Hub Bento (Span 12) -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                <!-- Prestasi 1 (Span 6) -->
+                <div
+                  class="lg:col-span-6 p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+                  <div
+                    class="absolute -top-12 -right-12 w-36 h-36 bg-primary-fixed/50 rounded-full blur-2xl pointer-events-none">
+                  </div>
+                  <div>
+                    <div class="flex items-center justify-between mb-5">
+                      <span
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+                        <span class="material-symbols-outlined text-[16px]">emoji_events</span>
+                        <span>Juara 1 Tingkat Nasional</span>
+                      </span>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Tahun
+                        2025</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">
+                      Kompetisi Arsitektur Minecraft Nasional Epiphany
+                    </h3>
+                    <p class="font-headline-sm text-body-sm text-primary font-semibold mb-3">
+                      Kategori Sekolah • Diselenggarakan oleh Universitas Pradita
+                    </p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+                      Meraih podium pertama dalam kompetisi arsitektur virtual skala nasional dengan merancang tata
+                      ruang spasial 3D yang memadukan estetika lanskap, struktur fungsional, dan narasi konsep yang
+                      kuat.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2 pt-2">
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">3D
+                      Spatial Design</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Architectural
+                      Logic</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">Nasional</span>
+                  </div>
+                </div>
+                <!-- Prestasi 2 (Span 6) -->
+                <div
+                  class="lg:col-span-6 p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+                  <div
+                    class="absolute -top-12 -right-12 w-36 h-36 bg-tertiary-fixed/50 rounded-full blur-2xl pointer-events-none">
+                  </div>
+                  <div>
+                    <div class="flex items-center justify-between mb-5">
+                      <span
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+                        <span class="material-symbols-outlined text-[16px]">military_tech</span>
+                        <span>Juara 1 Internal Sekolah</span>
+                      </span>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Tahun
+                        2026</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2">
+                      Festival Inovasi dan Kewirausahaan Siswa (FIKSI) 2026
+                    </h3>
+                    <p class="font-headline-sm text-body-sm text-tertiary font-semibold mb-3">
+                      Tingkat Internal Sekolah • SMKS Cinta Kasih Tzu Chi
+                    </p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+                      Memenangkan Juara 1 dalam ajang inovasi karya dan kewirausahaan siswa berkat gagasan produk
+                      digital solutif, validasi rancangan antarmuka aplikasi, serta presentasi pitch yang memukau
+                      dewan juri.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2 pt-2">
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">Product
+                      Innovation</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface">UI/UX
+                      Pitch</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-tertiary font-semibold">FIKSI
+                      2026</span>
+                  </div>
+                </div>
+                <!-- Sertifikat Callout Card (Span 12) -->
+                <div
+                  class="lg:col-span-12 p-8 md:p-10 rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div class="flex items-start md:items-center gap-5">
+                    <div
+                      class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 shadow-md">
+                      <span class="material-symbols-outlined text-[32px]">folder_special</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface font-bold">
+                        Arsip Sertifikat Resmi &amp; Pelatihan
+                      </h3>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                        Meliputi <strong class="text-on-surface">Sertifikat DSF 44.0 FPD UI/UX (2025)</strong>,
+                        <strong class="text-on-surface">Sertifikat Program SMK Mengajar 2025</strong>, dan dokumentasi
+                        pencapaian lainnya yang tersimpan secara terverifikasi di Google Drive.
+                      </p>
+                    </div>
+                  </div>
+                  <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold shadow-md hover:bg-primary transition-all duration-200 flex-shrink-0"
+                    href="https://drive.google.com/drive/folders/1v2XqOXJ-HEcP2m0NuBoOmVHknieodvnz?hl=ID"
+                    rel="noreferrer" target="_blank">
+                    <span>Buka Google Drive Sertifikat</span>
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 7: KONTAK & CALL TO ACTION (#kontak) -->
+            <section class="w-full max-w-[1200px] mx-auto px-gutter py-space-xl" id="kontak">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                <!-- Col 1: Direct Contact Details (Span 5) -->
+                <div
+                  class="lg:col-span-5 p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div
+                      class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider mb-2">
+                      <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                      <span>Konektivitas</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-3">Mari Terhubung
+                    </h2>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-8 leading-relaxed">
+                      Terbuka untuk tawaran magang industri, proyek freelance web / UI design, maupun kolaborasi
+                      pembuatan gim dan multimedia.
+                    </p>
+                    <div class="space-y-4">
+                      <!-- Location -->
+                      <div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container-low">
+                        <div
+                          class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                          <span class="material-symbols-outlined text-[20px]">location_on</span>
+                        </div>
+                        <div class="min-w-0">
+                          <div class="font-label-sm text-label-sm text-on-surface-variant">Domisili</div>
+                          <div class="font-body-md text-body-sm font-semibold text-on-surface truncate">Cengkareng,
+                            Jakarta Barat</div>
+                        </div>
+                      </div>
+                      <!-- WhatsApp / Phone -->
+                      <div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container-low">
+                        <div
+                          class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                          <span class="material-symbols-outlined text-[20px]">call</span>
+                        </div>
+                        <div class="min-w-0">
+                          <div class="font-label-sm text-label-sm text-on-surface-variant">Telepon / WhatsApp</div>
+                          <a class="font-body-md text-body-sm font-semibold text-on-surface hover:text-primary transition-colors truncate block"
+                            href="https://wa.me/6289507955985" rel="noreferrer" target="_blank">
+                            +62 89507955985
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Email -->
+                      <div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container-low">
+                        <div
+                          class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                          <span class="material-symbols-outlined text-[20px]">mail</span>
+                        </div>
+                        <div class="min-w-0">
+                          <div class="font-label-sm text-label-sm text-on-surface-variant">Email Resmi</div>
+                          <a class="font-body-md text-body-sm font-semibold text-on-surface hover:text-primary transition-colors truncate block"
+                            href="mailto:muhammadnabiltaseefa15@gmail.com">
+                            muhammadnabiltaseefa15@gmail.com
+                          </a>
+                        </div>
+                      </div>
+                      <!-- LinkedIn -->
+                      <div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container-low">
+                        <div
+                          class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                          <span class="material-symbols-outlined text-[20px]">link</span>
+                        </div>
+                        <div class="min-w-0">
+                          <div class="font-label-sm text-label-sm text-on-surface-variant">Profil LinkedIn</div>
+                          <a class="font-body-md text-body-sm font-semibold text-primary hover:underline truncate block"
+                            href="https://linkedin.com/in/muhammadnabiltaseefa/" rel="noreferrer" target="_blank">
+                            linkedin.com/in/muhammadnabiltaseefa/
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-6">
+                    <a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold shadow-md hover:bg-primary transition-all"
+                      href="https://wa.me/6289507955985?text=Halo%20Nabil,%20saya%20tertarik%20untuk%20berdiskusi%20tentang%20proyek/peluang%20magang"
+                      rel="noreferrer" target="_blank">
+                      <span class="material-symbols-outlined text-[20px]">chat</span>
+                      <span>Chat Langsung via WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Col 2: Interactive Contact Form (Span 7) -->
+                <div
+                  class="lg:col-span-7 p-8 md:p-10 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between mb-6">
+                      <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">Kirim Pesan Langsung
+                      </h3>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant">Respons Cepat</span>
+                    </div>
+                    <form class="space-y-4" id="contactForm"
+                      onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah disiapkan. Nabil akan segera merespons.');">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label class="block font-label-sm text-label-sm text-on-surface mb-1.5 font-medium"
+                            for="nama">Nama Anda</label>
+                          <input
+                            class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                            id="nama" placeholder="John Doe" required="" type="text" />
+                        </div>
+                        <div>
+                          <label class="block font-label-sm text-label-sm text-on-surface mb-1.5 font-medium"
+                            for="email">Alamat Email</label>
+                          <input
+                            class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                            id="email" placeholder="johndoe@example.com" required="" type="email" />
+                        </div>
+                      </div>
+                      <div>
+                        <label class="block font-label-sm text-label-sm text-on-surface mb-1.5 font-medium"
+                          for="subjek">Kategori Kebutuhan</label>
+                        <select
+                          class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                          id="subjek">
+                          <option value="magang">Peluang Magang / Rekrutmen Siswa</option>
+                          <option value="website">Proyek Pengembangan Website</option>
+                          <option value="uiux">Perancangan UI/UX &amp; Desain Produk</option>
+                          <option value="multimedia">Kebutuhan Produksi Video / Multimedia</option>
+                          <option value="lainnya">Pertanyaan Umum / Diskusi Kolaborasi</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label class="block font-label-sm text-label-sm text-on-surface mb-1.5 font-medium"
+                          for="pesan">Isi Pesan</label>
+                        <textarea
+                          class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all resize-none"
+                          id="pesan"
+                          placeholder="Tuliskan gambaran proyek, tawaran magang, atau pesan yang ingin disampaikan..."
+                          required="" rows="4"></textarea>
+                      </div>
+                      <button
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-on-surface text-surface font-headline-sm text-body-sm font-semibold hover:bg-primary transition-all"
+                        type="submit">
+                        <span>Kirimkan Pesan</span>
+                        <span class="material-symbols-outlined text-[18px]">send</span>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="pt-6 mt-4 border-t border-surface-container-low">
+                    <p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+                      <span class="material-symbols-outlined text-primary text-[16px]">verified_user</span>
+                      <span>Informasi kontak Anda dijamin terjaga kerahasiaannya dan hanya digunakan untuk keperluan
+                        korespondensi resmi.</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)] mt-space-xl">
+          <div class="max-w-[1200px] mx-auto px-gutter py-space-xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pb-space-xl">
+              <div class="md:col-span-6 flex flex-col gap-space-sm">
+                <div
+                  class="flex items-center gap-space-xs font-headline-md text-headline-md text-on-surface tracking-tight">
+                  <span>Nabil</span><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface font-semibold">Muhammad Nabil Taseefa</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Siswa Pengembangan Perangkat Lunak dan GIM
+                  (PPLG)<br />SMKS Cinta Kasih Tzu Chi</p>
+              </div>
+              <div class="md:col-span-6 flex flex-col gap-space-sm md:items-end justify-center">
+                <div class="flex flex-col md:items-end gap-1.5 font-label-md text-label-md text-on-surface-variant">
+                  <div class="flex items-center gap-2"><span
+                      class="material-symbols-outlined text-primary text-[18px]">location_on</span><span>Cengkareng,
+                      Jakarta Barat</span></div>
+                  <div class="flex items-center gap-2"><span
+                      class="material-symbols-outlined text-primary text-[18px]">call</span><a
+                      class="hover:text-on-surface transition-colors" href="tel:+6289507955985">+62 89507955985</a>
+                  </div>
+                  <div class="flex items-center gap-2"><span
+                      class="material-symbols-outlined text-primary text-[18px]">mail</span><a
+                      class="hover:text-on-surface transition-colors"
+                      href="mailto:muhammadnabiltaseefa15@gmail.com">muhammadnabiltaseefa15@gmail.com</a></div>
+                  <div class="flex items-center gap-2"><span
+                      class="material-symbols-outlined text-primary text-[18px]">link</span><a
+                      class="hover:text-on-surface transition-colors"
+                      href="https://linkedin.com/in/muhammadnabiltaseefa/" rel="noreferrer"
+                      target="_blank">linkedin.com/in/muhammadnabiltaseefa/</a></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest">
+              <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Muhammad Nabil Taseefa. Seluruh hak
+                cipta dilindungi.</p>
+              <div class="flex items-center gap-space-sm"><a aria-label="LinkedIn"
+                  class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+                  href="https://linkedin.com/in/muhammadnabiltaseefa/" rel="noreferrer" target="_blank"><span
+                    class="material-symbols-outlined text-[18px]">share</span></a><a aria-label="Email"
+                  class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+                  href="mailto:muhammadnabiltaseefa15@gmail.com"><span
+                    class="material-symbols-outlined text-[18px]">alternate_email</span></a><a
+                  aria-label="Code Repository"
+                  class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+                  href="#"><span class="material-symbols-outlined text-[18px]">code</span></a></div>
+            </div>
+          </div>
+        </footer>
+      </body>
+
+</html>
+</div>
+</main>
+
+
+
+<!-- Floating Back to Top Button -->
+<button id="back-to-top" type="button" aria-label="Kembali ke atas"
+  class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-primary text-on-primary shadow-lg opacity-0 invisible translate-y-3 transition-all duration-300 hover:bg-primary-container hover:shadow-xl focus:outline-none flex items-center justify-center cursor-pointer">
+  <span class="material-symbols-outlined text-[24px]">arrow_upward</span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.getElementById('site-header');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+
+    // Mobile menu toggle
+    function toggleMobileMenu(forceState) {
+      if (!mobileMenu) return;
+      const shouldOpen = forceState !== undefined ? forceState : mobileMenu.classList.contains('hidden');
+      if (shouldOpen) {
+        mobileMenu.classList.remove('hidden');
+        if (mobileMenuIcon) mobileMenuIcon.textContent = 'close';
+        if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileMenu.classList.add('hidden');
+        if (mobileMenuIcon) mobileMenuIcon.textContent = 'menu';
+        if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMobileMenu();
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          toggleMobileMenu(false);
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024) {
+          toggleMobileMenu(false);
+        }
+      });
+    }
+
+    // Smooth scroll handler with easing
+    function smoothScrollTo(targetY, duration = 600) {
+      const startY = window.pageYOffset || document.documentElement.scrollTop;
+      const difference = targetY - startY;
+      if (Math.abs(difference) < 4) return;
+
+      let startTime = null;
+
+      function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+      }
+
+      function step(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const easeProgress = easeInOutCubic(progress);
+
+        window.scrollTo(0, Math.round(startY + difference * easeProgress));
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(step);
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    // Scroll to element accounting for fixed header height
+    function scrollToElement(targetElement) {
+      if (!targetElement) return;
+      const headerHeight = header ? header.offsetHeight : 80;
+      const rect = targetElement.getBoundingClientRect();
+      const targetY = rect.top + window.pageYOffset - headerHeight + 2;
+      smoothScrollTo(Math.max(0, targetY), 650);
+    }
+
+    // Attach smooth scrolling to all hash links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const hash = this.getAttribute('href');
+        if (!hash || hash === '#') return;
+
+        const targetId = hash.substring(1);
+        let targetElement = document.getElementById(targetId);
+
+        // Handle aliases
+        if (!targetElement && targetId === 'profil') targetElement = document.getElementById('hero');
+        if (!targetElement && targetId === 'hero') targetElement = document.getElementById('profil');
+
+        if (targetElement) {
+          e.preventDefault();
+          scrollToElement(targetElement);
+
+          if (history.pushState) {
+            history.pushState(null, '', hash);
+          } else {
+            location.hash = hash;
+          }
+
+          toggleMobileMenu(false);
+        }
+      });
+    });
+
+    // Back to top floating button
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothScrollTo(0, 600);
+        if (history.pushState) {
+          history.pushState(null, '', '#profil');
+        }
+      });
+    }
+
+    // Active navigation link highlighting (Scrollspy)
+    function updateActiveNav() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const headerHeight = header ? header.offsetHeight : 80;
+      const triggerOffset = scrollY + headerHeight + 100;
+      const totalHeight = document.documentElement.scrollHeight;
+      const viewportHeight = window.innerHeight;
+
+      let currentSection = '';
+
+      // If near the bottom of page, activate Kontak
+      if (scrollY + viewportHeight >= totalHeight - 60) {
+        currentSection = 'kontak';
+      } else if (scrollY < 150) {
+        currentSection = 'profil';
+      } else {
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          if (triggerOffset >= top && triggerOffset < top + height) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+      }
+
+      if (currentSection === 'hero') currentSection = 'profil';
+
+      function setClasses(linkElements) {
+        linkElements.forEach(link => {
+          const target = link.getAttribute('data-nav') || (link.getAttribute('href') || '').replace('#', '');
+          const isActive = target === currentSection;
+
+          if (isActive) {
+            link.classList.add('bg-surface-container', 'text-on-surface', 'font-semibold');
+            link.classList.remove('text-on-surface-variant');
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.classList.remove('bg-surface-container', 'font-semibold');
+            link.classList.add('text-on-surface-variant');
+            link.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      setClasses(navLinks);
+      setClasses(mobileNavLinks);
+
+      // Toggle Back to Top button
+      if (backToTopBtn) {
+        if (scrollY > 300) {
+          backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-3');
+          backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-3');
+          backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        }
+      }
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          updateActiveNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Initial call on load
+    updateActiveNav();
+  });
+</script>
+</body>
+
+</html>
